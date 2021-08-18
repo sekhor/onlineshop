@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
 
+import Header from './Utility/Header/Header';
+import Footer from './Utility/Footer/Footer';
+import Products from './Catalog/Products';
+
 function App() {
+  const title = "Intel - Online Bazzar [Hari Raya Special]";
+  const headerStyle = { color:'green' };
+  // the values can be passed to the component as an attribute 
+  // instead of sending values as attribute what if we can send it as inner text
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Header headerStyle={ headerStyle }>{ title }</Header>
+      <Products/>
+      <Footer/>
     </div>
   );
 }
